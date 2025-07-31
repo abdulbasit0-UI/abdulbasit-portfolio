@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { getAllBlogPosts } from '../lib/blog';
-import DarkModeToggle from './components/DarkModeToggle';
 import Terminal from './components/Terminal';
 export default function Home() {
   const recentBlogs = getAllBlogPosts().slice(0, 2);

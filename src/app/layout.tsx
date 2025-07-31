@@ -5,7 +5,6 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 import Header from './components/Header';
 import Footer from './components/Footer';
-import DarkModeScript from "./DarkModeScript";
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {

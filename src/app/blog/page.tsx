@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { getAllBlogPosts } from '../../lib/blog';
 
 export const metadata = {
-  title: 'Blog | John Doe',
+  title: 'Blog | Abdulbasit',
   description: 'Technical writing on backend development, systems design, and more.',
 };
 
@@ -11,7 +11,7 @@ export default function BlogPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
-      
+
       <h1 className="text-3xl font-bold mb-8">Blog</h1>
 
       {posts.length === 0 ? (
