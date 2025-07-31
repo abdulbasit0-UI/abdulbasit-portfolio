@@ -148,7 +148,7 @@ export default function Home() {
                 <h4 className="text-xl font-medium">B.S. in Computer Science</h4>
                 <p className="text-gray-600 dark:text-gray-400 mt-1">University of Engineering & Tech</p>
                 <p className="mt-2 text-gray-700 dark:text-gray-300">
-                  Graduated with honors. Thesis: <em>"Efficient Data Extraction in Dynamic Web Environments"</em>
+                  Graduated with honors. Thesis: <em>&quot;Efficient Data Extraction in Dynamic Web Environments&quot;</em>
                 </p>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">2016 – 2020</p>
               </div>
