@@ -112,7 +112,7 @@ export default function Terminal() {
     exit: () => [
       { type: 'text', content: 'Nice try. This terminal is unstoppable. 🫡' }
     ],
-    // @ts-ignore
+    // @ts-expect-error
     unknown: (cmd: string) => [
       { type: 'text', content: `Command not found: ${cmd}. Type "help" for options.` }
     ]
