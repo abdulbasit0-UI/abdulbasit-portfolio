@@ -60,7 +60,7 @@ export default function BlogPost({ params }: Props) {
       <div className="max-w-3xl mx-auto px-6 py-16 text-center">
         <h1 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">Post Not Found</h1>
         <p className="mt-4 text-gray-600 dark:text-gray-400">
-          The article you're looking for doesn't exist.
+          The article you&rsquo;re looking for doesn&rsquo;t exist.
         </p>
         <p className="mt-6">
           <a

@@ -1,36 +1,24 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+// components/ThemeToggle.js
+  import { useTheme } from 'next-themes';
+import { BiMoon, BiSun } from 'react-icons/bi';
 
-export default function DarkModeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  function ThemeToggle() {
+    const { theme, setTheme } = useTheme();
 
-  useEffect(() => {
-    const saved = localStorage.getItem('dark-mode') === 'true';
-    setIsDark(saved);
-    if (saved) {
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
+    return (
+      <button
+        className="inline-flex items-center p-2 transition duration-300 ease-in-out rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      >
+        {theme === 'dark' ? (
+          <BiSun className="w-6 h-6 text-yellow-500" />
+        ) : (
+          <BiMoon className="w-6 h-6 text-gray-500" />
+        )}
+      </button>
+    );
+  }
 
-  const toggle = () => {
-    const newMode = !isDark;
-    setIsDark(newMode);
-    localStorage.setItem('dark-mode', String(newMode));
-    if (newMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  };
-
-  return (
-    <button
-      onClick={toggle}
-      className="text-gray-700 dark:text-gray-300 hover:underline text-sm"
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-    >
-      {isDark ? 'Light Mode' : 'Dark Mode'}
-    </button>
-  );
-}
+  export default ThemeToggle;

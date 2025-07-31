@@ -1,44 +1,8 @@
 @import "tailwindcss";
 
-.dark {
-  color-scheme: dark;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-.dark .prose :where(pre):not(:where([class~="not-prose"] *)) {
-  @apply bg-gray-800;
-}
 
-.dark .prose :where(code):not(:where([class~="not-prose"] *)) {
-  @apply bg-gray-800 text-gray-100 px-1 py-0.5 rounded;
-}
-
-.dark {
-  @apply bg-gray-900 text-gray-100;
-}
-
-.dark .bg-white {
-  @apply bg-gray-800;
-}
-
-.dark .border-b {
-  @apply border-gray-700;
-}
-
-.dark .text-gray-900 {
-  @apply text-gray-100;
-}
-
-.dark .text-gray-700 {
-  @apply text-gray-300;
-}
-
-.dark .text-gray-600 {
-  @apply text-gray-400;
-}
-
-.dark .text-gray-500 {
-  @apply text-gray-500;
-}
 
 /* Add this to your global CSS or component styles */
 

@@ -3,8 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-import Header from './components/Header'; 
-import Footer from './components/Footer'; 
+import Header from './components/Header';
+import Footer from './components/Footer';
+import DarkModeScript from "./DarkModeScript";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Abdulbasit | Backend Developer",
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
     "Backend engineer specializing in Node.js, Nest Js, and distributed systems.",
   metadataBase: new URL("https://yourportfolio.com"),
   openGraph: {
-    title: "John Doe | Backend Developer",
+    title: "Abdulbasit | Backend Developer",
     description: "Building robust backend systems with modern tech.",
     url: "https://yourportfolio.com",
     siteName: "Abdulbasit Portfolio",
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    site: "@johndoe",
+    site: "@AbsAbhsyn",
   },
 };
 
@@ -44,11 +46,13 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
-        <div className="min-h-screen dark:bg-gray-900 bg-gray-50 text-gray-900 dark:text-gray-100 flex flex-col">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <ThemeProvider attribute="class">
+          <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
