@@ -4,6 +4,7 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
 import { markedHighlight } from "marked-highlight";
 import { Marked } from 'marked';
+import Link from 'next/link';
 
 // Reuse the same theme names as in layout (github = light, github-dark = dark)
 // But we'll load both via script in root layout for full control
@@ -63,12 +64,12 @@ export default function BlogPost({ params }: Props) {
           The article you&rsquo;re looking for doesn&rsquo;t exist.
         </p>
         <p className="mt-6">
-          <a
+          <Link
             href="/blog"
             className="text-blue-600 dark:text-blue-400 hover:underline"
           >
             ← Back to Blog
-          </a>
+          </Link>
         </p>
       </div>
     );
@@ -79,12 +80,12 @@ export default function BlogPost({ params }: Props) {
   return (
     <article className="max-w-3xl mx-auto px-6 py-12">
       {/* Back Link */}
-      <a
+      < Link
         href="/blog"
         className="inline-block mb-6 text-blue-600 dark:text-blue-400 hover:underline text-sm"
       >
         ← Back to Blog
-      </a>
+      </Link>
 
       {/* Title & Metadata */}
       <header className="mb-8">
