@@ -1,10 +1,3 @@
-Absolutely! Here's a **professional, clean, and informative `README.md`** for your **Next.js 15 Backend Developer Portfolio**. It’s tailored to reflect that this is both a **portfolio site** and a **demonstration of backend development skills** — not just a frontend template.
-
----
-
-### ✅ `README.md`
-
-```markdown
 # Backend Developer Portfolio
 
 A modern, minimal, and content-focused portfolio built with **Next.js 15**, **React**, and **Tailwind CSS** — designed specifically for a **backend developer** who values clean architecture, performance, and real content over flashy gradients and SaaS clichés.
@@ -158,42 +151,18 @@ Or use your own CI/CD pipeline.
 ## 📬 Contact
 
 Want to collaborate or have questions?  
-Reach out at [your-email@example.com](mailto:your-email@example.com)  
-GitHub: [@yourusername](https://github.com/yourusername)  
-LinkedIn: [/in/yourprofile](https://linkedin.com/in/yourprofile)
+Reach out at [habdulbasit51@gmail.com](mailto:habdulbasit51@gmail.com)  
+GitHub: [@abdulbasit0-ui](https://github.com/abdulbasit0-ui)  
+LinkedIn: [/in/abdulbasit0-ui](https://www.linkedin.com/in/abdulhussain084/)
 
 ---
 
 ## 🎯 Why This Stands Out
 
-This isn’t just a resume site — it’s a **demonstration of backend craftsmanship**:
+This isn't just a resume site — it's a **demonstration of backend craftsmanship**:
 - You write real blog posts
 - You build real APIs
 - You design for clarity, not noise
 - And yes, you even added a terminal — because you can.
 
 Welcome to the portfolio of a developer who ships.
-```
-
----
-
-### ✅ How to Use This README
-
-1. Save this as `README.md` in your project root
-2. Replace:
-   - `yourportfolio.com` → your actual domain
-   - `yourusername` → your GitHub/LinkedIn
-   - `your-email@example.com` → your email
-   - Optional: Add your photo or logo
-3. Push to GitHub/GitLab — it will render beautifully
-
----
-
-This `README.md` does more than explain the project — it **reinforces your personal brand** as a thoughtful, capable, and modern backend developer.
-
-Let me know if you want:
-- A version with GitHub badges
-- A version in Markdown for a GitHub repo
-- Or to generate a `package.json` description from this
-
-You're all set. 🚀
