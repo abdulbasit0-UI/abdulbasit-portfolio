@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getAllBlogPosts } from '../lib/blog';
 import Terminal from './components/Terminal';
+import CountryTimezone from './components/TimeZone';
 export default function Home() {
   const recentBlogs = getAllBlogPosts().slice(0, 2);
 
@@ -11,7 +12,7 @@ export default function Home() {
       <main className="max-w-4xl mx-auto   px-6 py-12 flex-1">
         {/* Hero */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-4">Backend Developer</h2>
+          <h2 className="text-3xl font-bold mb-4">Typescript Backend Developer | 6 years of experience</h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-2xl">
             Building robust, scalable systems with Node.js, Python, and modern DevOps practices.
             Focused on clean architecture, performance, and automation.
@@ -38,7 +39,15 @@ export default function Home() {
             >
               CV
             </a>
+
           </div>
+
+          <p
+            className="text-gray-700 my-4 dark:text-gray-300"
+          >
+            Location: South Africa 
+          </p>
+          <CountryTimezone />
         </section>
 
         <section className="my-16">
@@ -96,12 +105,15 @@ export default function Home() {
                   <div className="w-6 h-6 rounded-full bg-blue-600 border-4 border-white dark:border-gray-800 shadow"></div>
                 </div>
                 <div className="ml-16 bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <h4 className="text-xl font-medium">Senior Backend Engineer @ TechFlow</h4>
-                  <p className="text-gray-600 dark:text-gray-400 mt-1">Jan 2022 – Present</p>
+                  <h4 className="text-xl font-medium">Shopify Theme Developer @ Tiandy Africa</h4>
+                  <p className="text-gray-600 dark:text-gray-400 mt-1">Jan 2024 – Present</p>
                   <ul className="list-disc list-inside mt-3 text-gray-700 dark:text-gray-300 space-y-1">
-                    <li>Developed microservices using NestJS and Docker, deployed on AWS ECS</li>
-                    <li>Built internal API gateway reducing latency by 40%</li>
-                    <li>Led migration from monolith to modular backend using Node.js + MongoDB</li>
+                    <li>Developing and customizing Shopify themes using React, Liquid, and Remix.
+                    </li>
+                    <li>Implemented performance-optimized themes for high-traffic ecommerce sites.
+                    </li>
+                    <li>Integrated advanced features to improve customer engagement and sales
+                      conversion.</li>
                   </ul>
                 </div>
               </div>
@@ -113,12 +125,29 @@ export default function Home() {
                   <div className="w-6 h-6 rounded-full bg-blue-600 border-4 border-white dark:border-gray-800 shadow"></div>
                 </div>
                 <div className="ml-16 bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <h4 className="text-xl font-medium">Backend Developer @ DataHarvest</h4>
-                  <p className="text-gray-600 dark:text-gray-400 mt-1">Jun 2020 – Dec 2021</p>
+                  <h4 className="text-xl font-medium">Full-Stack Web Developer @ Umartech</h4>
+                  <p className="text-gray-600 dark:text-gray-400 mt-1">Jun 2022 – Dec 2023</p>
                   <ul className="list-disc list-inside mt-3 text-gray-700 dark:text-gray-300 space-y-1">
-                    <li>Designed and maintained large-scale web scrapers using Python + Scrapy</li>
-                    <li>Integrated scraped data into MongoDB pipelines for real-time analytics</li>
-                    <li>Improved scraper resilience with rotating proxies and retry logic</li>
+                    <li>Built internal web applications using NestJS, React, and Next.js.</li>
+                    <li>Developed supplier booking systems and logistics management tools.</li>
+                    <li>Worked in Agile sprints, ensuring timely and maintainable code delivery.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="relative flex items-start gap-6">
+                {/* Circle with year */}
+                <div className="absolute left-6 top-1 z-10">
+                  <div className="w-6 h-6 rounded-full bg-blue-600 border-4 border-white dark:border-gray-800 shadow"></div>
+                </div>
+                <div className="ml-16 bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <h4 className="text-xl font-medium">WordPress Developer Intern @ Optimum wellness</h4>
+                  <p className="text-gray-600 dark:text-gray-400 mt-1">Jun 2022 – Dec 2023</p>
+                  <ul className="list-disc list-inside mt-3 text-gray-700 dark:text-gray-300 space-y-1">
+                    <li>Customized eCommerce websites with WooCommerce and WordPress.</li>
+                    <li>Developed custom themes and plugins tailored to business requirements.</li>
+                    <li>Improved page speed and SEO performance through optimized code and design.
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -144,12 +173,9 @@ export default function Home() {
 
               {/* Content card */}
               <div className="ml-16 bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <h4 className="text-xl font-medium">B.S. in Computer Science</h4>
-                <p className="text-gray-600 dark:text-gray-400 mt-1">University of Engineering & Tech</p>
-                <p className="mt-2 text-gray-700 dark:text-gray-300">
-                  Graduated with honors. Thesis: <em>&quot;Efficient Data Extraction in Dynamic Web Environments&quot;</em>
-                </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">2016 – 2020</p>
+                <h4 className="text-xl font-medium">(GED) Metric</h4>
+
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">2022</p>
               </div>
             </div>
           </div>
@@ -172,12 +198,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="ml-16 bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <h4 className="text-xl font-medium">Scrapy Orchestrator</h4>
+                  <h4 className="text-xl font-medium">Ecommerce Platform</h4>
                   <p className="text-gray-700 dark:text-gray-300 mt-2">
-                    A Docker-based system to run and monitor multiple Scrapy spiders with centralized logging and MongoDB output.
+                    Built a multi-vendor ecommerce dashboard using Next.js and NestJS.
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                    <strong>Tech:</strong> Python, Scrapy, Docker, MongoDB
+                    <strong>Tech:</strong> Next.js, NestJS, TypeScript, MongoDB, Docker
                   </p>
                 </div>
               </div>
@@ -191,12 +217,14 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="ml-16 bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <h4 className="text-xl font-medium">API Gateway (NestJS)</h4>
+                  <h4 className="text-xl font-medium">Logistics Management System</h4>
                   <p className="text-gray-700 dark:text-gray-300 mt-2">
-                    High-performance gateway with rate limiting, JWT auth, and service discovery for 10+ microservices.
+                    Created a logistics platform that automated supplier booking and reduced manual
+                    workload by 40%.
+
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                    <strong>Tech:</strong> NestJS, Redis, Docker, Kubernetes
+                    <strong>Tech:</strong> Next.js, NestJS, TypeScript, MongoDB, Docker
                   </p>
                 </div>
               </div>

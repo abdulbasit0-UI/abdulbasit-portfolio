@@ -1,13 +1,11 @@
 import { getBlogPostBySlug } from '../../../lib/blog';
 import { Metadata } from 'next';
 import hljs from 'highlight.js';
-import 'highlight.js/styles/github.css';
+// Remove the CSS import from here
+// import 'highlight.js/styles/github.css';
 import { markedHighlight } from "marked-highlight";
 import { Marked } from 'marked';
 import Link from 'next/link';
-
-// Reuse the same theme names as in layout (github = light, github-dark = dark)
-// But we'll load both via script in root layout for full control
 
 const marked = new Marked(
   markedHighlight({
@@ -19,7 +17,6 @@ const marked = new Marked(
     }
   })
 );
-
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -77,37 +74,36 @@ export default async function BlogPost({ params }: Props) {
     );
   }
 
-  // Render markdown to HTML
-
   return (
-    <article className="max-w-3xl mx-auto px-6 py-12">
-      {/* Back Link */}
-      < Link
-        href="/blog"
-        className="inline-block mb-6 text-blue-600 dark:text-blue-400 hover:underline text-sm"
-      >
-        ← Back to Blog
-      </Link>
 
-      {/* Title & Metadata */}
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-          {post.title}
-        </h1>
-        <time className="text-gray-500 dark:text-gray-400 text-sm">
-          {new Date(post.date).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          })}
-        </time>
-      </header>
+      <article className="max-w-3xl mx-auto px-6 py-12">
+        {/* Back Link */}
+        <Link
+          href="/blog"
+          className="inline-block mb-6 text-blue-600 dark:text-blue-400 hover:underline text-sm"
+        >
+          ← Back to Blog
+        </Link>
 
-      {/* Content */}
-      <div
-        className="blog-content text-gray-900 dark:text-gray-100"
-        dangerouslySetInnerHTML={{ __html: marked.parse(post.content) }}
-      />
-    </article>
+        {/* Title & Metadata */}
+        <header className="mb-8">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            {post.title}
+          </h1>
+          <time className="text-gray-500 dark:text-gray-400 text-sm">
+            {new Date(post.date).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </time>
+        </header>
+
+        {/* Content */}
+        <div
+          className="blog-content text-gray-900 dark:text-gray-100"
+          dangerouslySetInnerHTML={{ __html: marked.parse(post.content) }}
+        />
+      </article>
   );
 }

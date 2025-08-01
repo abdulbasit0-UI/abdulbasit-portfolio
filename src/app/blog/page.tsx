@@ -21,10 +21,10 @@ export default function BlogPage() {
           {posts.map((post) => (
             <article key={post.slug} className="border-b pb-8 last:border-b-0">
               <Link href={`/blog/${post.slug}`} className="hover:underline">
-                <h2 className="text-2xl font-semibold text-gray-800">{post.title}</h2>
+                <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">{post.title}</h2>
               </Link>
-              <p className="text-gray-600 mt-2">{post.description}</p>
-              <time className="text-sm text-gray-500">{post.date}</time>
+              <p className="text-gray-600 mt-2 dark:text-gray-400">{post.description}</p>
+              <time className="text-sm text-gray-500 dark:text-gray-400">{post.date}</time>
             </article>
           ))}
         </div>
